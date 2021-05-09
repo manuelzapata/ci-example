@@ -22,5 +22,8 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
+      - name: Compile source code
+        run: mvn compiler:compile
+
       - name: Run unit tests
         run: mvn test
