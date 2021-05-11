@@ -20,6 +20,11 @@
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.organization>manuelzapata</sonar.organization>
+        <sonar.projectKey>manuelzapata_ci-example</sonar.projectKey>
+
     </properties>
 
     <build>
