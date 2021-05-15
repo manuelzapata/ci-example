@@ -5,11 +5,20 @@ import java.math.BigDecimal;
 public class FabricaServicio {
 
     public static ServicioRestriccion getServicio(String ciudad) {
-        ServicioRestriccion resultado = switch (ciudad) {
-            case "Medellín" -> new ServicioRestriccionMedellin();
-            case "Cali" -> new ServicioRestriccionCali();
-            case "Bogotá" -> new ServicioRestriccionBogota();
-            default -> throw new UnsupportedOperationException("La ciudad " + ciudad + " no es soportada.");
+        ServicioRestriccion resultado = null;
+
+        switch (ciudad) {
+            case "Medellín":
+                resultado = new ServicioRestriccionMedellin();
+                break;
+            case "Cali":
+                resultado = new ServicioRestriccionCali();
+                break;
+            case "Bogotá":
+                resultado = new ServicioRestriccionBogota();
+                break;
+            default:
+                throw new UnsupportedOperationException("La ciudad " + ciudad + " no es soportada.");
         };
         return resultado;
     }
